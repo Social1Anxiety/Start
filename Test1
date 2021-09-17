@@ -1,0 +1,55 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.279915899, 0, 0.321267009, 0)
+main.Selectable = true
+main.Size = UDim2.new(0, 505, 0, 255)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 505, 0, 50)
+TextLabel.Font = Enum.Font.SpecialElite
+TextLabel.Text = "Personal Hub"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+
+UICorner.Parent = main
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.99, Color3.fromRGB(59, 59, 59)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = main
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.0198019799, 0, 0.274509817, 0)
+TextButton.Size = UDim2.new(0, 110, 0, 30)
+TextButton.Font = Enum.Font.SpecialElite
+TextButton.Text = "Test1"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UICorner_2.Parent = TextButton
+
+-- Scripts:
+
+local function AJOKTFJ_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	print("yo momsofat")
+	
+end
+coroutine.wrap(AJOKTFJ_fake_script)()
