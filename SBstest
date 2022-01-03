@@ -154,7 +154,7 @@ tab4:Bind("Force Timestop",Enum.KeyCode.X,function()
 end)
 
 tab4:Bind("Force Replica",Enum.KeyCode.R,function()
-    game:GetService("ReplicatedStorage").ReplicaEffect:FireServer();
+    game:GetService("ReplicatedStorage").Duplicate:FireServer();
 end)
 
 tab4:Bind("Force Invisibility",Enum.KeyCode.Z,function()
@@ -162,7 +162,7 @@ tab4:Bind("Force Invisibility",Enum.KeyCode.Z,function()
     game:GetService("ReplicatedStorage").Ghostinvisibilityactivated:FireServer();
 end)
 
-tab4:Bind("Force Mail",Enum.KeyCode.E,function()
+tab4:Bind("Force Mail",Enum.KeyCode.G,function()
     game:GetService("ReplicatedStorage").MailSend:FireServer();
 end)
 
@@ -222,18 +222,6 @@ spawn(function()
             if _G.RainbowCharacter then
                 if LocalPlayer.Character ~= nil and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") ~= nil and LocalPlayer.Character:WaitForChild("Humanoid").Health > 0 and LocalPlayer.Character.isInArena ~= nil and LocalPlayer.Character.isInArena.Value == true then
                     game:GetService("ReplicatedStorage").Goldify:FireServer(false, BrickColor.random());
-                end
-            end
-        end)
-    end
-end)
-
-spawn(function()
-    while wait(2.5) do
-        pcall(function()
-            if _G.SpamBricks then
-                if LocalPlayer.Character ~= nil and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") ~= nil and LocalPlayer.Character:WaitForChild("Humanoid").Health > 0 and LocalPlayer.Character.isInArena ~= nil and LocalPlayer.Character.isInArena.Value == true then
-                    game:GetService("ReplicatedStorage").lbrick:FireServer()
                 end
             end
         end)
@@ -647,7 +635,7 @@ game:GetService("RunService").Heartbeat:Connect(function()
     pcall(function()
         if _G.AdminNotifier then
             if game:GetService("Players"):FindFirstChild("PimGameFreak") or game:GetService("Players"):FindFirstChild("buffwagon") or game:GetService("Players"):FindFirstChild("Astronaxtic") or game:GetService("Players"):FindFirstChild("Villadyne") or game:GetService("Players"):FindFirstChild("undeadtaIIie") or game:GetService("Players"):FindFirstChild("L3fr3akyy") or game:GetService("Players"):FindFirstChild("moignon06") or game:GetService("Players"):FindFirstChild("Aleph_Zero1") or game:GetService("Players"):FindFirstChild("Adam_DK") then
-                LocalPlayer:Kick(" \n[dizy's script] \nAdmin joined! Join on other server. ")
+                LocalPlayer:Kick(" \n| Admin Panel | \nAdmin joined! Join on other server. ")
             end
         end
     end)
