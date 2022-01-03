@@ -170,8 +170,8 @@ tab4:Bind("Force EMP",Enum.KeyCode.R,function()
     game:GetService("ReplicatedStorage").StunR:FireServer(game:GetService("Workspace")[LocalPlayer.Name].Stun);
 end)
 
-tab3:Button("Get 250 Kills",function()
-    for i=1,250 do
+tab3:Box("KillStreak Kills","number",function(value) 
+    for i=1,value do
         game:GetService("ReplicatedStorage").KillsUpdated:FireServer(i, game:GetService("Workspace")[LocalPlayer.Name].Killstreak);
     end
 end)
